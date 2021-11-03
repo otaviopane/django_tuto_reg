@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from django.http import HttpResponse
 
 urlpatterns = [
-    path('', include('myproject.core.urls'), namespace='core'), 
+    path('', include('myproject.core.urls', namespace='core')), 
     # Le todos o conteudo do urls.py dentro da pasta core
     path('admin/', admin.site.urls),
 ]
